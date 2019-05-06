@@ -1,0 +1,21 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  # Configure server1
+  config.vm.define "server1" do |vm1|
+    config.vm1.box = "ubuntu/bionic64"
+    config.vm1.network "forwarded_port", guest:80, host:8000
+    config.vm1.synced_folder "html" ,"/var/web"
+    config.vm1.provision :shell do |script|
+      script.path = "bootstrap.sh"
+    end
+  end
+  # Configure server2
+  config.vm.define "server2" do |vm2|
+    config.vm2.box = "ubuntu/bionic64"
+    config.vm2.network "forwarded_port", guest:80, host:8001
+    config.vm2.synced_folder "html" ,"/var/web"
+    config.vm2.provision :shell do |script|
+      script.path = "bootstrap.sh"
+    end
+  end
+end

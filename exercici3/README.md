@@ -1,4 +1,4 @@
-# Exercici 2
+# Exercici 3
 
 Crear un arxiu Vagrantfile que tingui els següents requeriments:
 

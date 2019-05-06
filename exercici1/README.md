@@ -9,6 +9,6 @@ Crear un arxiu Vagrantfile que tingui els següents requeriments:
   * Mostrar un avís que s'està aprovisionant
   * Fer update dels paquets
   * Instal·lar apache
-  * Enllaç simbòlic de /var/web a /var/www
+  * Enllaç simbòlic de /var/web a /var/www/html
 
 Comproveu que funciona correctament!
